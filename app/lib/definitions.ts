@@ -2,8 +2,10 @@ export type Tenant = {
   id: string;
   name: string;
   email: string;
+  password: string;
   image_url: string;
   roomNumber: string;
+  floor: string;
   monthlyRent: RentStatus[];
   assignedRent: number;
 };
@@ -20,6 +22,7 @@ export type User = {
 
 export type Rooms = {
   roomNumber: string;
+  floor: number;
   tenants: Tenant[];
   sharing: Sharing;
 };

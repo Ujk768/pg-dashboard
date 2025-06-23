@@ -1,3 +1,5 @@
+import { floor } from "./placeholder-data";
+
 const mongoose = require("mongoose");
 
 
@@ -21,4 +23,11 @@ export async function fetchCardData() {
     numberOfCustomers,
     numberOfInvoices,
   };
+}
+
+
+export async function getDetailsPerFloor(floorNumber: string){
+  const floorPPl =floor.find(item => item.floor === floorNumber);
+  floorPPl?.tenants.map(item)
+  return 
 }
